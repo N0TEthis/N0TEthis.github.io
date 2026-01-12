@@ -5,9 +5,34 @@
     <meta name="sanatorium" content="A silly website for fun , silly website , website for fun">
     <title>sanatorium</title>
     <link rel="stylesheet" href="css3.css">
+    <style>
+        /* Стили для счетчика */
+        .counter-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .counter-number {
+            font-weight: bold;
+            color: #ff3366;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body class="dd" style="background-image: url('https://i.pinimg.com/originals/fa/90/31/fa90319437261c5105ffad098b8c019a.gif');">
-   
+     <!-- Счетчик посещений -->
+    <div class="counter-container">
+        Посещений: <span class="counter-number" id="visitCounter">0</span>
+        </div>
     <div>
 
     <header class="aa"> 
@@ -42,6 +67,28 @@
       
        </div>
     </main>
-    
+     <script>
+        // Счетчик посещений
+        document.addEventListener('DOMContentLoaded', function() {
+            // Проверяем, есть ли уже счетчик в localStorage
+            let visitCount = localStorage.getItem('sanatoriumVisitCount');
+            
+            // Если нет - создаем, если есть - увеличиваем
+            if (!visitCount) {
+                visitCount = 1;
+            } else {
+                visitCount = parseInt(visitCount) + 1;
+            }
+            
+            // Сохраняем обновленное значение
+            localStorage.setItem('sanatoriumVisitCount', visitCount);
+            
+            // Отображаем счетчик
+            document.getElementById('visitCounter').textContent = visitCount;
+            
+            // Также выводим в консоль для отладки
+            console.log('Количество посещений:', visitCount);
+        });
+    </script>
 </body>
 </html>

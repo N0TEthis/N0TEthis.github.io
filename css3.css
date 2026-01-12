@@ -1,6 +1,11 @@
 
 
 @media (min-width: 1400px){
+html {
+  transform: scale(0.5); 
+  transform-origin: 0 0; 
+}
+
 
 .aa{
     display: flex;
@@ -59,6 +64,7 @@ pre{
 button{
     background-color: #ffffff;
 }
+
 }
 
 

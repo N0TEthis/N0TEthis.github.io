@@ -1,0 +1,17 @@
+
+@media (min-width: 1400px){
+
+
+pre{
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+}
+@media (max-width: 1000px){
+    pre{
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+}

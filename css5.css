@@ -1,17 +1,19 @@
-
-@media (min-width: 1400px){
-
-
+@media (max-width: 768px){
 pre{
-    display: flex;
-    justify-content: center;
-    color: antiquewhite;
+display:flex;
+justify-content:center;
+color:antiquewhite;
+font-size:2rem;
+margin-top:50px;
 }
 }
-@media (max-width: 1000px){
-    pre{
-    display: flex;
-    justify-content: center;
-    color: antiquewhite;
+
+@media (min-width:769px){
+pre{
+display:flex;
+justify-content:center;
+color:antiquewhite;
+font-size:3rem;
+margin-top:100px;
 }
 }

@@ -1,94 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="sanatorium" content="A silly website for fun , silly website , website for fun">
-    <title>sanatorium</title>
-    <link rel="stylesheet" href="css3.css">
-    <style>
-        /* Стили для счетчика */
-        .counter-container {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            color: #ff6e49da;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-        
-        .counter-number {
-            font-weight: bold;
-            color: #ff5233af;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body class="dd" style="background-image: url('https://i.pinimg.com/originals/fa/90/31/fa90319437261c5105ffad098b8c019a.gif');">
-     <!-- Счетчик посещений -->
-    <div class="counter-container">
-        Посещений: <span class="counter-number" id="visitCounter">0</span>
-        </div>
-    <div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sanatorium" content="A silly website for fun , silly website , website for fun">
+<title>sanatorium</title>
+<link rel="stylesheet" href="css3.css">
+<style>
+.counter-container{
+position:fixed;
+top:10px;
+right:10px;
+background:rgba(255,255,255,0.8);
+padding:5px 15px;
+border-radius:20px;
+font-family:Arial,sans-serif;
+font-size:14px;
+color:#ff6e49da;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
+z-index:1000;
+}
 
-    <header class="aa"> 
-    <img class="uu" src="https://i.pinimg.com/originals/84/ed/de/84eddeca09ff799df7a9841a669a546d.gif">
- <div class="zz">
-   <h1 class="bb"> 
-      SANATORIUM omg
-    </h1>
- 
- <p class="cc">
-    <em>  silly website for fun :-)</em>
- </p>
+.counter-number{
+font-weight:bold;
+color:#ff5233af;
+font-size:16px;
+}
+</style>
+</head>
+<body class="dd" style="background-image:url('https://i.pinimg.com/originals/fa/90/31/fa90319437261c5105ffad098b8c019a.gif')">
+
+<div class="counter-container">
+Посещений: <span class="counter-number" id="visitCounter">0</span>
 </div>
-    <img src="https://i.pinimg.com/originals/84/ed/de/84eddeca09ff799df7a9841a669a546d.gif">
-    
-    </header>
-    <main> 
-        <div class="gg">
-            
-           <div> <img src="https://i.pinimg.com/originals/4b/63/aa/4b63aaa3a3cc458af37bb69fd95b6aa7.gif"> </div>
-        <pre class="kk"> 
-  Hello 
-     world!  
-        </pre>
-        <script>
-        console.log('Привет, мир!');
-    </script>
-        <div> <img src="https://i.pinimg.com/originals/4b/63/aa/4b63aaa3a3cc458af37bb69fd95b6aa7.gif"></div>
-    </div>
-        <div class="gg"> 
-        <button onclick="document.location='html4.html'">Войти..</button>
-      
-       </div>
-    </main>
-     <script>
-        // Счетчик посещений
-        document.addEventListener('DOMContentLoaded', function() {
-            // Проверяем, есть ли уже счетчик в localStorage
-            let visitCount = localStorage.getItem('sanatoriumVisitCount');
-            
-            // Если нет - создаем, если есть - увеличиваем
-            if (!visitCount) {
-                visitCount = 1;
-            } else {
-                visitCount = parseInt(visitCount) + 1;
-            }
-            
-            // Сохраняем обновленное значение
-            localStorage.setItem('sanatoriumVisitCount', visitCount);
-            
-            // Отображаем счетчик
-            document.getElementById('visitCounter').textContent = visitCount;
-            
-            // Также выводим в консоль для отладки
-            console.log('Количество посещений:', visitCount);
-        });
-    </script>
+
+<header class="aa">
+<img class="uu" src="https://i.pinimg.com/originals/84/ed/de/84eddeca09ff799df7a9841a669a546d.gif">
+<div class="zz">
+<h1 class="bb">SANATORIUM omg</h1>
+<p class="cc"><em>silly website for fun :-)</em></p>
+</div>
+<img src="https://i.pinimg.com/originals/84/ed/de/84eddeca09ff799df7a9841a669a546d.gif">
+</header>
+
+<main>
+<div class="gg">
+<div><img src="https://i.pinimg.com/originals/4b/63/aa/4b63aaa3a3cc458af37bb69fd95b6aa7.gif"></div>
+<pre class="kk">Hello 
+world!</pre>
+<script>console.log('Привет, мир!');</script>
+<div><img src="https://i.pinimg.com/originals/4b/63/aa/4b63aaa3a3cc458af37bb69fd95b6aa7.gif"></div>
+</div>
+<div class="gg">
+<button onclick="document.location='html4.html'">Войти..</button>
+</div>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+let visitCount=localStorage.getItem('sanatoriumVisitCount');
+if(!visitCount){
+visitCount=1;
+}else{
+visitCount=parseInt(visitCount)+1;
+}
+localStorage.setItem('sanatoriumVisitCount',visitCount);
+document.getElementById('visitCounter').textContent=visitCount;
+console.log('Количество посещений:',visitCount);
+});
+</script>
 </body>
 </html>
